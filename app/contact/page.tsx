@@ -29,6 +29,7 @@ export default function ContactPage() {
         title={<>Let’s get you on the <span className="text-gold">tee sheet.</span></>}
         subtitle="The fastest way to book is online. Prefer to talk it through first? Call or email Nick directly — he’ll help you choose the right program."
         image="/images/hamilton-farm-aerial.jpg"
+        imagePosition="object-[center_70%]"
       >
         <MagneticButton href={SITE.bookingUrl} external className="btn-gold">
           Book Online Now

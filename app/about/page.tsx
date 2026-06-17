@@ -19,7 +19,8 @@ export default function AboutPage() {
         eyebrow="About Nick Bova"
         title={<>Player first. <span className="text-gold">Teacher always.</span></>}
         subtitle={ABOUT.intro}
-        image="/images/hamilton-farm-aerial.jpg"
+        image="/images/nick-coaching-1.jpg"
+        imagePosition="object-[center_38%]"
       />
 
       {/* Bio — big image + story */}

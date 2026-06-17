@@ -17,11 +17,11 @@ type Props = {
  */
 export default function PageHero({ eyebrow, title, subtitle, image, imagePosition = 'object-center', children }: Props) {
   return (
-    <section className="relative flex min-h-[68vh] items-end overflow-hidden md:min-h-[78vh]">
+    <section className="relative flex min-h-[54vh] items-end overflow-hidden md:min-h-[62vh]">
       <Image src={image} alt="" fill priority className={`-z-10 object-cover ${imagePosition}`} />
       {/* Legibility wash */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-navy-950 via-navy-950/65 to-navy-950/35" />
-      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-950/80 via-navy-950/20 to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-t from-navy-950 via-navy-950/55 to-navy-950/25" />
+      <div className="absolute inset-0 -z-10 bg-gradient-to-r from-navy-950/85 via-navy-950/25 to-transparent" />
 
       <div className="container-px relative pb-16 pt-40 md:pb-20">
         <Reveal>
