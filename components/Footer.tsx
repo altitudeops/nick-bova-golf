@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { NAV, SITE } from '@/lib/content';
+import { FOOTER_NAV, SITE } from '@/lib/content';
 
 export default function Footer() {
   return (
@@ -8,11 +8,8 @@ export default function Footer() {
       <div className="container-px py-16">
         <div className="grid gap-12 md:grid-cols-[1.4fr_1fr_1fr]">
           <div>
-            <Link href="/" className="flex items-center gap-3">
-              <Image src="/brand/logo-white.svg" alt="Nick Bova Golf" width={48} height={32} className="h-8 w-auto" />
-              <span className="font-display text-xl tracking-tight">
-                Nick Bova <span className="text-gold">Golf</span>
-              </span>
+            <Link href="/" className="flex items-center" aria-label="Nick Bova Golf — home">
+              <Image src="/brand/logo-white.svg" alt="Nick Bova Golf" width={60} height={40} className="h-10 w-auto" />
             </Link>
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-bone/60">
               Class A PGA Professional and Director of Instruction at Hamilton Farm Golf Club.
@@ -23,7 +20,7 @@ export default function Footer() {
           <div>
             <h4 className="eyebrow mb-5">Explore</h4>
             <ul className="space-y-3 text-sm">
-              {NAV.map((item) => (
+              {FOOTER_NAV.map((item) => (
                 <li key={item.href}>
                   <Link href={item.href} className="text-bone/70 transition-colors hover:text-champagne">
                     {item.label}

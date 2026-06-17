@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Fraunces, Inter } from 'next/font/google';
+import { Teko, Inter } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -7,9 +7,9 @@ import ScrollProgress from '@/components/ScrollProgress';
 import Grain from '@/components/Grain';
 import { SITE } from '@/lib/content';
 
-const display = Fraunces({
+const display = Teko({
   subsets: ['latin'],
-  weight: ['300', '400', '500', '600'],
+  weight: ['400', '500', '600', '700'],
   variable: '--font-display',
   display: 'swap',
 });

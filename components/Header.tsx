@@ -37,18 +37,15 @@ export default function Header() {
       )}
     >
       <div className="container-px flex items-center justify-between">
-        <Link href="/" className="flex items-center gap-3" aria-label="Nick Bova Golf — home">
+        <Link href="/" className="flex items-center" aria-label="Nick Bova Golf — home">
           <Image
             src="/brand/logo-white.svg"
             alt="Nick Bova Golf"
-            width={42}
-            height={28}
-            className="h-7 w-auto"
+            width={54}
+            height={36}
+            className="h-9 w-auto"
             priority
           />
-          <span className="hidden font-display text-lg tracking-tight text-bone sm:block">
-            Nick Bova <span className="text-gold">Golf</span>
-          </span>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

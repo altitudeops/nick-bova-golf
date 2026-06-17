@@ -24,6 +24,10 @@ const config: Config = {
         bone: '#F7F5EF',
         sand: '#EFE9DC',
         mist: '#DDE4EC',
+        // Light-theme text tokens (for white/cream content sections)
+        ink: '#0A1A2F',
+        slate: '#566375',
+        line: '#E6E2D8',
       },
       fontFamily: {
         display: ['var(--font-display)', 'Georgia', 'serif'],

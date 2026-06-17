@@ -17,7 +17,7 @@ export default function CTABand() {
         <Reveal>
           <p className="eyebrow">Ready when you are</p>
           <h2 className="h-display mx-auto mt-5 max-w-3xl text-[clamp(2rem,4.5vw,3.4rem)] text-bone">
-            Let’s build a game you can <span className="text-gold italic">trust.</span>
+            Let’s build a game you can <span className="text-gold">trust.</span>
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-bone/70">
             Whether you’re chasing your first par or your club championship, every session is

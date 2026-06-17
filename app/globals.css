@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --font-display: 'Fraunces', Georgia, serif;
+  --font-display: 'Teko', 'Arial Narrow', sans-serif;
   --font-body: 'Inter', system-ui, sans-serif;
 }
 
@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  @apply bg-navy-950 text-bone font-body antialiased;
+  @apply bg-white text-ink font-body antialiased;
   overflow-x: hidden;
 }
 
@@ -22,19 +22,19 @@ body {
   color: #04101f;
 }
 
-/* Thin champagne scrollbar on the dark shell */
+/* Thin scrollbar */
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #04101f;
+  background: #EFEBE0;
 }
 ::-webkit-scrollbar-thumb {
-  background: #103156;
+  background: #CDBE9A;
   border-radius: 999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #1c4a7a;
+  background: #C8A24B;
 }
 
 @layer components {
@@ -47,7 +47,7 @@ body {
   }
 
   .h-display {
-    @apply font-display font-light leading-[1.02] tracking-tight;
+    @apply font-display font-semibold leading-[0.9] tracking-[0.01em];
     overflow-wrap: break-word;
   }
   @media (min-width: 768px) {
@@ -65,7 +65,7 @@ body {
   }
 
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-full px-7 py-3.5 text-sm font-semibold uppercase tracking-accent transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-2 rounded-none px-7 py-3.5 text-sm font-semibold uppercase tracking-accent transition-all duration-300;
   }
   .btn-gold {
     @apply btn bg-champagne text-navy-950 hover:bg-champagne-light hover:shadow-[0_12px_40px_-12px_rgba(200,162,75,0.7)];
@@ -73,13 +73,47 @@ body {
   .btn-ghost {
     @apply btn border border-white/25 text-bone hover:border-champagne hover:text-champagne;
   }
+  /* Outline button for light/white content sections */
+  .btn-outline {
+    @apply btn border border-ink/25 text-ink hover:border-champagne-deep hover:text-champagne-deep;
+  }
+  /* Solid dark button (LEARN MORE / SELECT PLAN) — matches Nick's live site */
+  .btn-dark {
+    @apply btn bg-ink text-white hover:bg-navy-800;
+  }
+  .btn-dark-outline {
+    @apply btn border border-white/70 text-white hover:bg-white hover:text-ink;
+  }
+
+  /* Diagonal pinstripe texture block — Nick's signature decorative accent */
+  .stripes {
+    background-image: repeating-linear-gradient(
+      -45deg,
+      rgba(10, 26, 47, 0.07) 0,
+      rgba(10, 26, 47, 0.07) 1px,
+      transparent 1px,
+      transparent 11px
+    );
+  }
 
   .card-glass {
-    @apply rounded-2xl border border-white/10 bg-white/[0.04] backdrop-blur-sm;
+    @apply rounded-none border border-white/10 bg-white/[0.04] backdrop-blur-sm;
+  }
+  /* Card for light content sections */
+  .card-light {
+    @apply rounded-none border border-line bg-white shadow-[0_14px_36px_-22px_rgba(10,26,47,0.35)];
+  }
+
+  /* Eyebrow on light backgrounds — deeper gold for contrast */
+  .eyebrow-ink {
+    @apply font-body text-[10px] sm:text-xs font-semibold uppercase tracking-[0.14em] sm:tracking-accent text-champagne-deep;
   }
 
   .hairline {
     @apply h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent;
+  }
+  .hairline-ink {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-ink/15 to-transparent;
   }
 }
 
